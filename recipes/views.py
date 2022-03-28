@@ -3,7 +3,9 @@ from django.shortcuts import render
 
 
 def home(request):
-    return HttpResponse('The Force Homepage')
+    return render(request, 'recipes/home.html', context={
+        'name': 'Obi Wan Kenobi',
+    })
 
 
 def about(request):
